@@ -1,13 +1,68 @@
 {
-  "name": "puck-config",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@vasttrader/puck-config",
+  "version": "0.1.0",
+  "description": "Prebuilt Puck editor component configs for React and Next.js",
+  "author": "Vast Trader <vasttrader2021@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasttrader/puck-config.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "bugs": {
+    "url": "https://github.com/vasttrader/puck-config/issues"
+  },
+  "homepage": "https://github.com/vasttrader/puck-config#readme",
+  "keywords": [
+    "puck",
+    "puck-editor",
+    "editor",
+    "nextjs",
+    "react",
+    "cms",
+    "page-builder",
+    "components"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "biome lint src/",
+    "format": "biome format src/ --write",
+    "check": "biome check --write src/",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run check && npm run typecheck && npm run build"
+  },
+  "peerDependencies": {
+    "@measured/puck": ">=0.20.2",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@tinymce/tinymce-react": "^6.3.0",
+    "tinymce": "^8.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@measured/puck": ">=0.20.2",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
