@@ -16,12 +16,14 @@ export const Editor = {
               licenseKey="gpl"
               tinymceScriptSrc="https://cdnjs.cloudflare.com/ajax/libs/tinymce/8.1.2/tinymce.min.js"
               init={{
-                height: 200,
+                minHeight: 200,
                 menubar: false,
                 statusbar: false,
                 branding: false,
-                plugins: "link lists table",
-                toolbar: "bold italic | bullist numlist | link | table",
+                plugins: "link lists table advlist",
+                toolbar:
+                  "fontsize bold italic | alignleft aligncenter alignright alignjustify | bullist numlist link table",
+                toolbar_mode: "wrap",
               }}
               initialValue={value}
               onBlur={(_, editor) => {
