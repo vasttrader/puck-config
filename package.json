@@ -1,6 +1,6 @@
 {
   "name": "@vasttrader/puck-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Prebuilt Puck editor component configs for React and Next.js",
   "author": "Vast Trader <vasttrader2021@gmail.com>",
   "license": "MIT",
