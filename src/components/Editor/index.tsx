@@ -1,4 +1,4 @@
-import { type ComponentConfig, FieldLabel } from "@measured/puck";
+import { type ComponentConfig, FieldLabel } from "@puckeditor/core";
 import { Editor as TinyMCE } from "@tinymce/tinymce-react";
 
 export type EditorProps = {

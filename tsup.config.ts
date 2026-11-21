@@ -6,5 +6,8 @@ export default defineConfig({
   dts: true,
   sourcemap: true,
   clean: true,
-  external: ["react", "react-dom", "next"],
+  outExtension({ format }) {
+    return { js: format === "cjs" ? ".cjs" : ".js" };
+  },
+  external: ["@puckeditor/core", "react", "react-dom"],
 });

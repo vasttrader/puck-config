@@ -15,7 +15,7 @@ pnpm add @vasttrader/puck-config
 
 Make sure you have these installed:
 ```bash
-npm install react react-dom next @measured/puck
+npm install react react-dom next @puckeditor/core
 ```
 
 ## 🎯 Components
@@ -32,9 +32,9 @@ npm install react react-dom next @measured/puck
 // app/editor/page.tsx
 "use client";
 
-import { Puck } from "@measured/puck";
+import { Puck } from "@puckeditor/core";
 import { puckConfig } from "@vasttrader/puck-config";
-import "@measured/puck/puck.css";
+import "@puckeditor/core/puck.css";
 
 export default function EditorPage() {
   return (
@@ -54,8 +54,8 @@ export default function EditorPage() {
 
 ### Using Individual Components
 ```typescript
-import type { Config } from "@measured/puck";
-import { Editor, Space, Image, Accordion } from "puck-config";
+import type { Config } from "@puckeditor/core";
+import { Editor, Space, Image, Accordion } from "@vasttrader/puck-config";
 
 export const puckConfig: Config = {
   categories: {
