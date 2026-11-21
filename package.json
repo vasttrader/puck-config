@@ -1,6 +1,6 @@
 {
   "name": "@vasttrader/puck-config",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Prebuilt Puck editor component configs for React and Next.js",
   "author": "Vast Trader <vasttrader2021@gmail.com>",
   "license": "MIT",
@@ -34,7 +34,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "tsup",
@@ -46,7 +47,7 @@
     "prepublishOnly": "npm run check && npm run typecheck && npm run build"
   },
   "peerDependencies": {
-    "@measured/puck": ">=0.20.2",
+    "@puckeditor/core": ">=0.24.1",
     "react": ">=18",
     "react-dom": ">=18"
   },
@@ -56,7 +57,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.0",
-    "@measured/puck": ">=0.20.2",
+    "@puckeditor/core": ">=0.24.1",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "tsup": "^8.0.0",
